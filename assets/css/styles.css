@@ -1,0 +1,227 @@
+@font-face {
+  font-family: Dubai-Regular;
+  src: url("../fonts/DubaiW23-Regular.woff");
+  font-weight: 300; }
+
+@font-face {
+  font-family: Dubai-Medium;
+  src: url("../fonts/DubaiW23-Medium.woff");
+  font-weight: 500; }
+
+body {
+  font-family: Dubai-Regular;
+  font-size: 18px;
+  background-color: #F9F9F9; }
+
+select {
+  /* styling */
+  border-radius: 4px;
+  display: inline-block;
+  padding: 9px 16px;
+  box-sizing: border-box;
+  /* reset */
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+.font-size2 {
+  font-size: 20px; }
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */ }
+
+#offcanvas-sidebar .logo {
+  position: absolute;
+  top: 16px;
+  right: 16px; }
+
+#offcanvas-sidebar .nav-items-list {
+  margin-top: 16px; }
+  #offcanvas-sidebar .nav-items-list .nav-item {
+    height: 48px;
+    position: relative;
+    transition: all 0.25s ease;
+    padding-right: 10px;
+    padding-top: 9px;
+    box-sizing: border-box; }
+    #offcanvas-sidebar .nav-items-list .nav-item .icon,
+    #offcanvas-sidebar .nav-items-list .nav-item .name {
+      display: inline-block; }
+    #offcanvas-sidebar .nav-items-list .nav-item .icon {
+      width: 40px;
+      text-align: center;
+      vertical-align: middle; }
+    #offcanvas-sidebar .nav-items-list .nav-item .name {
+      font-family: Dubai-Medium; }
+    #offcanvas-sidebar .nav-items-list .nav-item .active-icon {
+      float: left;
+      display: none; }
+    #offcanvas-sidebar .nav-items-list .nav-item.active {
+      background-color: #4A90E2;
+      pointer-events: none; }
+      #offcanvas-sidebar .nav-items-list .nav-item.active .active-icon {
+        display: inline-block; }
+    #offcanvas-sidebar .nav-items-list .nav-item:hover {
+      background-color: #14457f; }
+
+#offcanvas-sidebar .profile-menu {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  height: 80px;
+  border-top: 1px solid #3D4A5A;
+  padding: 16px;
+  box-sizing: border-box; }
+  #offcanvas-sidebar .profile-menu .wrapper {
+    display: table;
+    position: relative;
+    width: 100%; }
+    #offcanvas-sidebar .profile-menu .wrapper .name-wrapper {
+      position: absolute;
+      right: 48px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: Dubai-Medium;
+      color: #EDF4FC;
+      padding-right: 8px; }
+      #offcanvas-sidebar .profile-menu .wrapper .name-wrapper .name {
+        font-size: 14px;
+        line-height: 24px; }
+      #offcanvas-sidebar .profile-menu .wrapper .name-wrapper .title {
+        font-size: 11px;
+        opacity: 0.5;
+        line-height: 18px; }
+    #offcanvas-sidebar .profile-menu .wrapper .dropdown-icon {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+
+#header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 50;
+  height: 64px;
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: #FFFFFF; }
+  #header.active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+  #header .fields {
+    float: left; }
+    #header .fields .search-input {
+      color: #666666;
+      border: 1px solid #DDDDDD;
+      border-radius: 4px;
+      width: 256px;
+      height: 48px;
+      padding: 9px 16px 9px 26.7px;
+      box-sizing: border-box;
+      outline: none; }
+      #header .fields .search-input::placeholder {
+        color: #B5B5B5; }
+    #header .fields .dropdown {
+      margin-left: 8px;
+      color: #565656;
+      border: 1px solid #DDDDDD;
+      border-radius: 4px;
+      width: 160px;
+      height: 48px;
+      background-image: linear-gradient(45deg, transparent 50%, black 50%), linear-gradient(135deg, black 50%, transparent 50%);
+      background-position: calc(100% - 135px) calc(1em + 2px), calc(100% - 130px) calc(1em + 2px);
+      background-size: 10px 5px, 5px 5px;
+      background-repeat: no-repeat; }
+      #header .fields .dropdown:focus {
+        outline: 0; }
+      #header .fields .dropdown:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 #000; }
+  @media (max-width: 768px) {
+    #header {
+      height: 120px; }
+      #header .fields .search-input, #header .fields .dropdown {
+        float: left; }
+      #header .fields .dropdown {
+        margin-left: 0; }
+      #header .fields .search-input {
+        width: 100%;
+        margin-top: 8px; } }
+
+.content .header-padding {
+  height: 64px; }
+
+.content section {
+  margin-left: 16px;
+  margin-right: 16px; }
+  .content section .title {
+    margin-top: 32px;
+    margin-bottom: 0;
+    font-family: Dubai-Medium;
+    font-size: 20px;
+    color: #30394A; }
+  .content section ul.items {
+    background-color: #FFFFFF;
+    padding: 0;
+    padding-left: 25px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    display: table;
+    width: 100%; }
+    .content section ul.items > li {
+      list-style-type: none;
+      cursor: move;
+      display: table-row;
+      width: 100%; }
+      .content section ul.items > li > div {
+        display: table-cell;
+        vertical-align: middle; }
+      .content section ul.items > li > .check-icon {
+        height: 24px;
+        width: 24px;
+        padding: 0 13px;
+        background-image: url("../images/icon-uncheck.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        transition: all 0.5s ease; }
+      .content section ul.items > li > .text {
+        color: #666666;
+        line-height: 30px;
+        padding-top: 16px;
+        padding-bottom: 18px; }
+      .content section ul.items > li .badge {
+        background: #E0E0E0;
+        border-radius: 100px;
+        float: left;
+        width: fit-content;
+        padding: 9px 8.158px;
+        font-family: Dubai-Regular;
+        font-size: 13px;
+        color: #535353; }
+    .content section ul.items > li.checked > .text {
+      text-decoration: line-through;
+      opacity: 0.5; }
+    .content section ul.items > li.checked > .check-icon {
+      background-image: url("../images/icon-check.svg"); }
+
+@media (max-width: 768px) {
+  .content .header-padding {
+    height: 120px; } }

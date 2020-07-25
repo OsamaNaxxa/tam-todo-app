@@ -1,0 +1,75 @@
+.content {
+  .header-padding {
+    height: $spacing-unit * 8px;
+  }
+  section {
+    @include insert-spacing("ml", 2);
+    @include insert-spacing("mr", 2);
+    .title {
+      @include insert-spacing("mt", 4);
+      margin-bottom: 0;
+      font-family: Dubai-Medium;
+      font-size: 20px;
+      color: $section-title;
+    }
+    ul.items {
+      background-color: $main-color;
+      padding: 0;
+      padding-left: 25px;
+      box-sizing: border-box;
+      @include insert-spacing("mt");
+      display: table;
+      width: 100%;
+      > li {
+        list-style-type: none;
+        cursor: move;
+        display: table-row;
+        width: 100%;
+        > div {
+          display: table-cell;
+          vertical-align: middle;
+        }
+        > .check-icon {
+          height: 24px;
+          width: 24px;
+          padding: 0 13px;
+          background-image: url("../images/icon-uncheck.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          cursor: pointer;
+          transition: all 0.5s ease;
+        }
+        > .text {
+          color: $item-text;
+          line-height: 30px;
+          @include insert-spacing("pt", 2);
+          @include insert-spacing("pb", 2, 2);
+        }
+        .badge {
+          background: $item-badge-background;
+          border-radius: 100px;
+          float: left;
+          width: fit-content;
+          padding: 9px 8.158px;
+          font-family: Dubai-Regular;
+          font-size: 13px;
+          color: $item-badge-text;
+        }
+      }
+      > li.checked {
+        > .text {
+          text-decoration: line-through;
+          opacity: 0.5;
+        }
+        > .check-icon {
+          background-image: url("../images/icon-check.svg");
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .header-padding {
+      height: $spacing-unit * 15px;
+    }
+  }
+}

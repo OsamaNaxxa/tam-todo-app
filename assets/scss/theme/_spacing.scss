@@ -1,0 +1,27 @@
+$spacing-unit: 8;
+
+@mixin insert-spacing($type, $scale: 1, $addition: 0) {
+  $spacing-type: "margin" !default;
+
+  @if $type == mt {
+    $spacing-type: "margin-top";
+  } @else if $type == mb {
+    $spacing-type: "margin-bottom";
+  } @else if $type == ml {
+    $spacing-type: "margin-left";
+  } @else if $type == mr {
+    $spacing-type: "margin-right";
+  } @else if $type == p {
+    $spacing-type: "padding";
+  } @else if $type == pt {
+    $spacing-type: "padding-top";
+  } @else if $type == pb {
+    $spacing-type: "padding-bottom";
+  } @else if $type == pl {
+    $spacing-type: "padding-left";
+  } @else if $type == pr {
+    $spacing-type: "padding-right";
+  }
+
+  #{$spacing-type}: #{($scale * $spacing-unit) + $addition}px;
+}

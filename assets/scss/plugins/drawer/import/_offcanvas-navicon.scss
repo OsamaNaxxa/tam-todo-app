@@ -1,0 +1,62 @@
+// OFFCANVAS - navicon
+// ===================
+// Note: In addition to the code below, the left/right position of the navicon is controlled on a per-option basis.
+// See `_options.scss`
+// Animated (transforming) navicon is based on http://www.transformicons.com
+
+#offcanvas-navicon {
+  position: fixed;
+  // top: $offcanvas-navicon-inset-top;
+  top: 12px;
+  right: 0;
+  z-index: $offcanvas-overlay-z-index + 2;
+  width: 32px;
+  padding: 10px 6px;
+  // background-image: url("../../../../assets/images/icon-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: $offcanvas-transition;
+  &:after,
+  &:before,
+  span {
+    display: block;
+    content: '';
+    display: block;
+    height: 2px;
+    margin: 4px;
+    border-radius: 2px;
+    background: $input-placeholder;
+  	transition: $offcanvas-transition;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.offcanvas-open #offcanvas-navicon {
+  background: url("../../../../assets/images/icon-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 1px;
+  padding: 10px;
+  height: 9.3px;
+  width: 9.3px;
+  &:after,
+  &:before,
+  span {
+    display: none;
+  }
+}
+
+// .offcanvas-open #offcanvas-navicon {
+//   background-image: url("../../../../assets/images/icon-close.svg");
+//   &:before {
+//     transform: translate3d(0, 8px, 0) rotate(135deg);
+//   }
+//   &:after {
+//     transform: translate3d(0, -8px, 0) rotate(-135deg);
+//   }
+//   span {
+//     transform: scale(0);
+//   }
+// }

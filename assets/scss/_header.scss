@@ -1,0 +1,66 @@
+#header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 50;
+  height: 64px;
+  @include insert-spacing("p");
+  box-sizing: border-box;
+  background-color: $main-color;
+  &.active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+  .fields {
+    float: left;
+    .search-input {
+      color: $item-text;
+      border: 1px solid $input-border;
+      border-radius: 4px;
+      width: 256px;
+      height: 48px;
+      padding: 9px 16px 9px 26.7px;
+      box-sizing: border-box;
+      outline: none;
+      &::placeholder {
+        color: $input-placeholder;
+      }
+    }
+    .dropdown {
+      @include insert-spacing("ml");
+      color: $select-option-text;
+      border: 1px solid $input-border;
+      border-radius: 4px;
+      width: 160px;
+      height: 48px;
+      background-image: linear-gradient(45deg, transparent 50%, black 50%),
+        linear-gradient(135deg, black 50%, transparent 50%);
+      background-position: calc(100% - 135px) calc(1em + 2px),
+        calc(100% - 130px) calc(1em + 2px);
+      background-size: 10px 5px, 5px 5px;
+      background-repeat: no-repeat;
+      &:focus {
+        outline: 0;
+      }
+      &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 #000;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    height: 120px;
+    .fields {
+      .search-input, .dropdown{
+        float: left;
+      }
+      .dropdown {
+        margin-left: 0;
+      }
+      .search-input {
+        width: 100%;
+        @include insert-spacing("mt");
+      }
+    }
+  }
+}

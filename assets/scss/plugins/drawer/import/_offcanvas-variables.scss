@@ -1,0 +1,22 @@
+// OFFCANVAS - variables
+// =====================
+
+// All Offcanvas variables use the `offcanvas-` namespace, so as
+// not to interfere with any other variable in your project.
+
+$offcanvas-navicon-inset-top: 11.3px;
+$offcanvas-navicon-inset-horizontal: 11.3px;
+$offcanvas-navicon-background: rgba(255,255,255, 0.5);
+$offcanvas-navicon-border-radius: 50%;
+
+$offcanvas-color-overlay: #000;
+$offcanvas-opacity-overlay: 0.1;
+$offcanvas-overlay-z-index: 100;
+
+$offcanvas-transition: all 400ms ease;
+
+$offcanvas-box-shadow: 0 0 5px #000;
+
+$offcanvas-sidebar-width: 200px;
+
+// Note: Do all _your_ Offcanvas sidebar and menus styling in `_styling.scss`.

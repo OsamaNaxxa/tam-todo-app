@@ -1,0 +1,124 @@
+body {
+  font-family: Dubai-Regular;
+  font-size: 18px;
+  background-color: $body-color;
+}
+
+select {
+  /* styling */
+  border-radius: 4px;
+  display: inline-block;
+  padding: 9px 16px;
+    box-sizing: border-box;
+
+  /* reset */
+
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.font-size2 {
+  font-size: 20px;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+#offcanvas-sidebar {
+  .logo {
+    position: absolute;
+    top: $spacing-unit * 2px;
+    right: $spacing-unit * 2px;
+  }
+  .nav-items-list {
+    @include insert-spacing("mt", 2);
+    .nav-item {
+      height: 48px;
+      position: relative;
+      transition: all 0.25s ease;
+      @include insert-spacing("pr", 1, 2);
+      @include insert-spacing("pt", 1, 1);
+      box-sizing: border-box;
+      .icon,
+      .name {
+        display: inline-block;
+      }
+      .icon {
+        width: 40px;
+        text-align: center;
+        vertical-align: middle;
+      }
+      .name {
+        font-family: Dubai-Medium;
+      }
+      .active-icon {
+        float: left;
+        display: none;
+      }
+      &.active {
+        background-color: $nav-item-active-background;
+        pointer-events: none;
+        .active-icon {
+          display: inline-block;
+        }
+      }
+      &:hover {
+        background-color: darken(
+          $color: $nav-item-active-background,
+          $amount: 30
+        );
+      }
+    }
+  }
+  .profile-menu{
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    height: 80px;
+    border-top: 1px solid $profile-menu-border;
+    padding: $spacing-unit*2px;
+    box-sizing: border-box;
+    .wrapper{
+      display: table;
+      position: relative;
+      width: 100%;
+      .name-wrapper{
+        position: absolute;
+        right: $spacing-unit*6px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-family: Dubai-Medium;
+        color: $nav-item-text;
+        @include insert-spacing("pr");
+        .name{
+          font-size: 14px;
+          line-height: 24px;
+        }
+        .title{
+          font-size: 11px;
+          opacity: 0.5;
+          line-height: 18px;
+        }
+        
+      }
+      .dropdown-icon{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

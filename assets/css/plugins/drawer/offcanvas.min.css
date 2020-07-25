@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: scrollbar; }
+
+#offcanvas-sidebar {
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all 400ms ease; }
+
+#page-wrap {
+  transition: all 400ms ease; }
+
+#offcanvas-navicon {
+  position: fixed;
+  top: 12px;
+  right: 0;
+  z-index: 102;
+  width: 32px;
+  padding: 10px 6px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 400ms ease; }
+  #offcanvas-navicon:after, #offcanvas-navicon:before,
+  #offcanvas-navicon span {
+    display: block;
+    content: '';
+    display: block;
+    height: 2px;
+    margin: 4px;
+    border-radius: 2px;
+    background: #B5B5B5;
+    transition: all 400ms ease; }
+  #offcanvas-navicon:hover {
+    cursor: pointer; }
+
+.offcanvas-open #offcanvas-navicon {
+  background: url("../../../../assets/images/icon-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 1px;
+  padding: 10px;
+  height: 9.3px;
+  width: 9.3px; }
+  .offcanvas-open #offcanvas-navicon:after, .offcanvas-open #offcanvas-navicon:before,
+  .offcanvas-open #offcanvas-navicon span {
+    display: none; }
+
+#offcanvas-sidebar {
+  background: #273648;
+  padding-top: 50px; }
+  #offcanvas-sidebar h4 {
+    margin: 24px 0 0;
+    color: #aaa;
+    padding: 8px 16px; }
+  #offcanvas-sidebar h4 a {
+    margin: -8px -16px; }
+  #offcanvas-sidebar ul {
+    width: 200px;
+    margin: 0;
+    list-style-type: none;
+    padding: 0; }
+  #offcanvas-sidebar a {
+    display: block;
+    color: #EDF4FC;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 12px;
+    transform: translate(0, -50%); }
+  #offcanvas-sidebar ul ul {
+    display: none;
+    position: absolute;
+    float: right;
+    margin-top: -41px;
+    margin-left: 200px; }
+  #offcanvas-sidebar div {
+    transition: all 400ms ease; }
+  #offcanvas-sidebar.offcanvas-child-open > div {
+    margin-left: -200px; }
+    #offcanvas-sidebar.offcanvas-child-open > div .offcanvas-child-visible {
+      display: block; }
+
+.offcanvas-child-link {
+  position: absolute;
+  display: inline-block;
+  width: 44px;
+  height: 40px;
+  margin-top: -40px;
+  margin-left: 156px;
+  border-left: 1px solid #999;
+  padding: 6px 16px;
+  background: #111;
+  color: #EDF4FC;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 12px;
+  transform: translate(0, -50%); }
+
+.offcanvas-child-back-link {
+  position: absolute;
+  display: block;
+  width: 100%;
+  margin-top: -42px;
+  border-top: 1px solid #999;
+  padding: 8px 16px;
+  color: #EDF4FC;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 12px;
+  transform: translate(0, -50%); }
+
+body #offcanvas-navicon {
+  right: 11.3px; }
+
+body #offcanvas-sidebar {
+  right: 0;
+  z-index: 101;
+  margin-right: -200px; }
+
+body.offcanvas-open #offcanvas-navicon {
+  right: 171px; }
+
+@media (min-width: 768px) {
+  body.offcanvas-open #page-wrap {
+    margin-right: 200px; } }
+
+body.offcanvas-open #offcanvas-sidebar {
+  margin-right: 0; }
+
+/*
+Example media query - to hide Offcanvas on screen widths above 768px.
+
+@media (min-width: 768px) {
+	#offcanvas-navicon,
+	#offcanvas-overlay,
+	#offcanvas-sidebar {
+		display: none;
+	}
+}
+*/
